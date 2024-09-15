@@ -64,7 +64,7 @@ export function ColorToggle({
     const { accentColor, radius } = useThemeContext();
 
     return (
-        <div className="flex items-center flex-wrap space-x-5">
+        <div className="flex items-center space-x-5 max-md:space-x-4">
             <Select.Root value={accentColor} onValueChange={setColor}>
                 <Select.Trigger className="!capitalize" />
                 <Select.Content position="popper">

@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Section from "@/components/my-section";
-import { Button, Link, Spinner, useThemeContext } from "@radix-ui/themes";
+import { Button, Link, Spinner, Text, useThemeContext } from "@radix-ui/themes";
 import { DataList, Badge } from "@radix-ui/themes";
 import { useTheme } from "next-themes";
 
@@ -24,9 +24,7 @@ export default function Home() {
                 <div className="flex flex-col justify-between items-center space-y-8">
                     <h1 className="lg:text-7xl text-center max-md:text-3xl text-5xl lg:w-[60%] font-bold my-10">
                         Switch themes & colors made fast using <br />{" "}
-                        <span color={color} className={`!text-${color}-500`}>
-                            Next.js + TypeScript
-                        </span>
+                        <Text className="opacity-80" color={color}>Next.js + TypeScript</Text>
                     </h1>
                     <div className="flex items-center space-x-5">
                         <Button
@@ -78,7 +76,10 @@ export default function Home() {
                                 Source Code
                             </DataList.Label>
                             <DataList.Value>
-                                <Link target="_blank" href="https://github.com/nchhillar2004/next-theme">
+                                <Link
+                                    target="_blank"
+                                    href="https://github.com/nchhillar2004/next-theme"
+                                >
                                     GitHub
                                 </Link>
                             </DataList.Value>

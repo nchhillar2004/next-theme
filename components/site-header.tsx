@@ -12,14 +12,14 @@ export default function SiteHeader({
 }) {
     return (
         <header className="py-4 bg-[var(--header)]">
-            <div className="container flex items-center space-x-5 justify-between">
+            <div className="container flex max-md:flex-col items-center space-x-5 justify-between">
                 <Link
                     href="/"
                     className="select-none font-extrabold lg:text-2xl text-xl"
                 >
                     Themes
                 </Link>
-                <div className="flex items-center space-x-5">
+                <div className="flex items-center space-x-5 max-md:space-x-4">
                     <ThemeToggle />
                     <ColorToggle setColor={setColor} setRadius={setRadius} />
                 </div>
